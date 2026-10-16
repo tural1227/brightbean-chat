@@ -35,6 +35,8 @@ class FlowsConfig(AppConfig):
         from apps.flows.triggers import matching  # noqa: F401
         from apps.flows.triggers.pipeline import register_routing
         from apps.flows.triggers.stages import register_builtin_hooks
+        from apps.flows.triggers.ai_responder import register_ai_responder
 
         register_builtin_hooks()
         register_routing()
+        register_ai_responder()
